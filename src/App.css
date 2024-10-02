@@ -1,22 +1,29 @@
 
 .main-content-anchor {
   display: grid;
-  grid-template-columns: 1fr 30em 1fr;
-  grid-template-rows: 1fr 8em 4em;
+  grid-template-columns: [left] 1fr [keyboard-left] 30em [keyboard-right] 0em [right];
+  grid-template-rows: [top] 4em [credit-bottom] 1fr [keyboard-top] 8em [bottom-bar-top] 4em [bottom];
   width: 100vw;
   height: 100vh;
 }
 
+@media only screen and (min-width: 60em) {
+  .main-content-anchor {
+    grid-template-columns: [left] 1fr [keyboard-left] 30em [keyboard-right] 1fr [right];
+  }
+}
+
 .main-text {
+  grid-area: top / left / bottom / right;
+  padding: 1em 1em 9em 1em;
+  background: var(--plybrd-main-text-background);
+  font-size: 2em;
   overflow-y: scroll;
   resize: none;
-  font-size: 2em;
-  padding: 1em 1em 9em 1em;
-  grid-area: 1 / 1 / 4 / 4;
 }
 
 .bottom-bar {
-  grid-area: 3 / 1 / 4 / 4;
+  grid-area: bottom-bar-top / left / bottom / right;
   background-color: var(--plybrd-background-color);
   box-shadow: 0 0 20px 16px #0000001f;
 }
@@ -32,10 +39,20 @@
   gap: .5em;
   padding: 1em;
 
-  grid-area: 3 / 3 / 4 / 4;
+  grid-area: top / keyboard-left / credit-bottom / right;
+  opacity: 50%;
+  justify-content: flex-end;
 
   color: var(--plybrd-foreground-color);
   text-decoration: none;
+}
+
+@media only screen and (min-width: 60em) {
+  .credit {
+    grid-area: bottom-bar-top / keyboard-right / bottom / right;
+    opacity: 100%;
+    justify-content: flex-start;
+  }
 }
 
 .credit-repo-name {
@@ -43,7 +60,7 @@
 }
 
 .keyboard-display {
-  grid-area: 2 / 2 / 4 / 3;
+  grid-area: keyboard-top / keyboard-left / bottom / keyboard-right;
   background-color: var(--plybrd-background-color);
   border-radius: .25em;
   box-shadow: 0 0 10px 8px #0000001f;

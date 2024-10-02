@@ -6,6 +6,7 @@
   color-scheme: light dark;
 
   --plybrd-foreground-color: rgba(255, 255, 255, 0.87);
+  --plybrd-main-text-background: #292C3F;
   --plybrd-background-color: #242424;
   --plybrd-background-second: #1a1a1a;
 
@@ -44,6 +45,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     --plybrd-foreground-color: #213547;
+    --plybrd-main-text-background: #ffffff;
     --plybrd-background-color: #ffffff;
     --plybrd-background-second: #f9f9f9;
   }
