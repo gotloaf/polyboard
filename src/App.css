@@ -29,7 +29,51 @@
 }
 
 .selector {
+  grid-area: bottom-bar-top / left / bottom / keyboard-left;
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0);
+  transition: background-color ease-in-out 100ms;
+}
+
+.selector:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.language-name {
+  font-weight: 800;
+}
+
+.language-subtitle {
+  font-size: .8em;
+}
+
+.picker {
+  grid-area: credit-bottom / left / bottom / keyboard-left;
+  background-color: var(--plybrd-background-color);
+  border-radius: .25em;
+  box-shadow: 0 0 10px 8px #0000001f;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.layout-option {
+  padding: .5em;
+  background-color: rgba(128, 128, 128, 0);
+  transition: background-color ease-in-out 100ms;
+  cursor: pointer;
+}
+
+.layout-option:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.locale-name {
+  opacity: 50%;
 }
 
 .credit {
@@ -64,4 +108,36 @@
   background-color: var(--plybrd-background-color);
   border-radius: .25em;
   box-shadow: 0 0 10px 8px #0000001f;
+}
+
+.keyboard-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.keyboard-key {
+  margin: .1em;
+  border-radius: .25em;
+
+  color: var(--plybrd-foreground-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: color ease-in-out 100ms, background-color ease-in-out 100ms;
+  text-align: center;
+}
+
+.last-key {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pressed-key {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.is-deadkey {
+  color: rgba(0, 255, 0, 1.0);
+}
+
+.affected-by-deadkey {
+  color: rgba(255, 0, 0, 1.0);
 }
