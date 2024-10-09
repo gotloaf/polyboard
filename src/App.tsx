@@ -70,7 +70,7 @@ function App() {
 
           // Certain non-mutating keyboard actions we should just ignore
           if (
-            (event.code == 'KeyA' && event.ctrlKey) ||  // Select all
+            (event.key == 'a' && event.ctrlKey) ||  // Select all, this must use .key because it varies depending on source keyboard
             (event.code == 'KeyC' && event.ctrlKey) ||  // Copy
             (event.code == 'KeyV' && event.ctrlKey)  // Paste - this is mutating but we must let it propagate for it to work
           ) {

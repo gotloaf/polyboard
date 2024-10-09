@@ -1,5 +1,6 @@
 
 import de_de from './layouts/de_de.json'
+import el_gr from './layouts/el_gr.json'
 import en_gb from './layouts/en_gb.json'
 import en_us_dvorak from './layouts/en_us_dvorak.json'
 import en_us from './layouts/en_us.json'
@@ -13,7 +14,10 @@ import pl_pl_programmers from './layouts/pl_pl_programmers.json'
 import pl_pl from './layouts/pl_pl.json'
 import ro_ro from './layouts/ro_ro.json'
 import ru_ru from './layouts/ru_ru.json'
+import ru_ru_phonetic from './layouts/ru_ru_phonetic.json'
+import sl_si from './layouts/sl_si.json'
 import sv_se from './layouts/sv_se.json'
+import sy_sy from './layouts/sy_sy.json'
 
 
 export type KeyOutput = {
@@ -48,6 +52,7 @@ export type KeyboardLayout = {
 export const EN_US: KeyboardLayout = en_us;
 export const LAYOUTS: KeyboardLayout[] = [
     de_de,
+    el_gr,
     en_gb,
     en_us_dvorak,
     en_us,
@@ -61,7 +66,10 @@ export const LAYOUTS: KeyboardLayout[] = [
     pl_pl,
     ro_ro,
     ru_ru,
+    ru_ru_phonetic,
+    sl_si,
     sv_se,
+    sy_sy,
 ];
 
 export function keyStateToOutput(
