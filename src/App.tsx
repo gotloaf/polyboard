@@ -9,7 +9,7 @@ import KeyboardLayoutDisplay from './keyboard/preview';
 function App() {
   // Text content management
   const textArea = useRef<HTMLTextAreaElement>(null);
-  const [textContent, setTextContent] = useState(defaultText);
+  const [textContent, setTextContent] = useState(defaultText.replaceAll("\r", ""));
   const selectionArea = useRef<[number, number] | undefined>();
   const [deadKey, setDeadKey] = useState<string | null>(null);
 
