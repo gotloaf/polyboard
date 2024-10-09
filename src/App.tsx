@@ -8,7 +8,7 @@ import KeyboardLayoutDisplay from './keyboard/preview';
 function App() {
   // Text content management
   const textArea = useRef<HTMLTextAreaElement>(null);
-  const [textContent, setTextContent] = useState("");
+  const [textContent, setTextContent] = useState("Type any text here.");
   const selectionArea = useRef<[number, number] | undefined>();
   const [deadKey, setDeadKey] = useState<string | null>(null);
 
@@ -107,6 +107,14 @@ function App() {
                 beforeText.length, beforeText.length
               ];
             }
+
+          // Enter - just insert a line break
+          } else if (event.code == 'Enter') {
+            event.preventDefault();
+            setTextContent(beforeText + "\n" + afterText);
+            selectionArea.current = [
+              beforeText.length + 1, beforeText.length + 1
+            ];
 
           // Standard keyboard handling, mapped according to the layout.
           } else if (event.code in layout.bindings) {
