@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 
 import './App.css'
+import defaultText from './default_text.txt?raw'
 import github from './assets/github.svg'
 import { eventToOutput, EN_US, KeyboardLayout, LAYOUTS } from './keyboard/layout';
 import KeyboardLayoutDisplay from './keyboard/preview';
@@ -8,7 +9,7 @@ import KeyboardLayoutDisplay from './keyboard/preview';
 function App() {
   // Text content management
   const textArea = useRef<HTMLTextAreaElement>(null);
-  const [textContent, setTextContent] = useState("Type any text here.");
+  const [textContent, setTextContent] = useState(defaultText);
   const selectionArea = useRef<[number, number] | undefined>();
   const [deadKey, setDeadKey] = useState<string | null>(null);
 
