@@ -1,13 +1,20 @@
 
 .main-content-anchor {
   display: grid;
-  grid-template-columns: [left] 1fr [keyboard-left] 30em [keyboard-right] 0em [right];
-  grid-template-rows: [top] 4em [credit-bottom] 1fr [keyboard-top] 8em [bottom-bar-top] 4em [bottom];
+  grid-template-columns: [left] 1fr [keyboard-left] 100vw [keyboard-right] 0em [right];
+  grid-template-rows: [top] 4em [credit-bottom] 1fr [keyboard-top] 40vw [bottom-bar-top] 4em [bottom];
   width: 100vw;
   height: 100vh;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 50em) {
+  .main-content-anchor {
+    grid-template-columns: [left] 1fr [keyboard-left] 30em [keyboard-right] 0em [right];
+    grid-template-rows: [top] 4em [credit-bottom] 1fr [keyboard-top] 8em [bottom-bar-top] 4em [bottom];
+  }
+}
+
+@media only screen and (min-width: 64em) {
   .main-content-anchor {
     grid-template-columns: [left] 1fr [keyboard-left] 30em [keyboard-right] 1fr [right];
   }
@@ -29,7 +36,7 @@
 }
 
 .selector {
-  grid-area: bottom-bar-top / left / bottom / keyboard-left;
+  grid-area: bottom-bar-top / left / bottom / keyboard-right;
   padding: .5em;
   display: flex;
   flex-direction: column;
@@ -53,12 +60,21 @@
 }
 
 .picker {
-  grid-area: credit-bottom / left / bottom / keyboard-left;
+  grid-area: credit-bottom / left / bottom / keyboard-right;
   background-color: var(--plybrd-background-color);
   border-radius: .25em;
   box-shadow: 0 0 10px 8px #0000001f;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+@media only screen and (min-width: 50em) {
+  .selector {
+    grid-area: bottom-bar-top / left / bottom / keyboard-left;
+  }
+  .picker {
+    grid-area: credit-bottom / left / bottom / keyboard-left;
+  }
 }
 
 .layout-option {
@@ -91,7 +107,7 @@
   text-decoration: none;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 64em) {
   .credit {
     grid-area: bottom-bar-top / keyboard-right / bottom / right;
     opacity: 100%;
@@ -104,10 +120,18 @@
 }
 
 .keyboard-display {
-  grid-area: keyboard-top / keyboard-left / bottom / keyboard-right;
+  grid-area: keyboard-top / keyboard-left / bottom-bar-top / keyboard-right;
+  font-size: 3vw;
   background-color: var(--plybrd-background-color);
   border-radius: .25em;
   box-shadow: 0 0 10px 8px #0000001f;
+}
+
+@media only screen and (min-width: 50em) {
+  .keyboard-display {
+    grid-area: keyboard-top / keyboard-left / bottom / keyboard-right;
+    font-size: 1em;
+  }
 }
 
 .keyboard-grid {
@@ -120,8 +144,12 @@
   margin: .1em;
   border-radius: .25em;
 
-  color: var(--plybrd-foreground-color);
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
+
+  color: var(--plybrd-foreground-color);
   background-color: rgba(255, 255, 255, 0.1);
   transition: color ease-in-out 100ms, background-color ease-in-out 100ms;
   text-align: center;

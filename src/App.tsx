@@ -238,14 +238,6 @@ function App() {
         <span className="language-name">{layout.language_name}</span>
         <span className="language-subtitle">{layout.locale_name}</span>
       </div>
-      { pickerShown ?
-      <div className="picker">
-        {LAYOUTS.map((value) => {
-          return <div className="layout-option" key={value.language_name + value.locale_name} onClick={() => {setLayout(value); setPickerShown(false);}}>
-            {value.language_name} <span className="locale-name">({value.locale_name})</span>
-          </div>;
-        })}
-      </div> : null }
       <a href="https://github.com/gotloaf/polyboard" target="_blank" className="credit">
         <img src={github} className="logo small invert-when-dark" alt="GitHub Logo" />
         <span>gotloaf/<span className="credit-repo-name">polyboard</span></span>
@@ -258,6 +250,14 @@ function App() {
           onClick={handleKeyPressed}
         />
       </div>
+      { pickerShown ?
+      <div className="picker">
+        {LAYOUTS.map((value) => {
+          return <div className="layout-option" key={value.language_name + value.locale_name} onClick={() => {setLayout(value); setPickerShown(false);}}>
+            {value.language_name} <span className="locale-name">({value.locale_name})</span>
+          </div>;
+        })}
+      </div> : null }
     </div>
   )
 }
