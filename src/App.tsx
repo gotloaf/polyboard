@@ -237,10 +237,12 @@ function App() {
         <span className="language-name">{layout.language_name}</span>
         <span className="language-subtitle">{layout.locale_name}</span>
       </div>
-      <a href="https://github.com/gotloaf/polyboard" target="_blank" className="credit">
-        <img src={github} className="logo small invert-when-dark" alt="GitHub Logo" />
-        <span>gotloaf/<span className="credit-repo-name">polyboard</span></span>
-      </a>
+      <div className="credit-anchor">
+        <a href="https://github.com/gotloaf/polyboard" target="_blank" className="credit">
+          <img src={github} className="logo small invert-when-dark" alt="GitHub Logo" />
+          <span>gotloaf/<span className="credit-repo-name">polyboard</span></span>
+        </a>
+      </div>
       <div className="keyboard-display">
         <KeyboardLayoutDisplay
           layout={layout}

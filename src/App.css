@@ -92,26 +92,33 @@
   opacity: 50%;
 }
 
-.credit {
+.credit-anchor {
+  grid-area: top / keyboard-left / credit-bottom / right;
+
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.credit {
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   gap: .5em;
   padding: 1em;
 
-  grid-area: top / keyboard-left / credit-bottom / right;
   opacity: 50%;
-  justify-content: flex-end;
-
   color: var(--plybrd-foreground-color);
   text-decoration: none;
 }
 
 @media only screen and (min-width: 64em) {
-  .credit {
+  .credit-anchor {
     grid-area: bottom-bar-top / keyboard-right / bottom / right;
-    opacity: 100%;
     justify-content: flex-start;
+  }
+  .credit {
+    opacity: 100%;
   }
 }
 
