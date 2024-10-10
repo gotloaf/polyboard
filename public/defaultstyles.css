@@ -5,10 +5,15 @@
 
   color-scheme: light dark;
 
-  --plybrd-foreground-color: rgba(255, 255, 255, 0.87);
+  --plybrd-foreground-color: #fbfbfb;
   --plybrd-main-text-background: #292C3F;
   --plybrd-background-color: #242424;
   --plybrd-background-second: #1a1a1a;
+  --plybrd-background-keyboard: #242424;
+  --plybrd-background-keys: #3a3a3a;
+  --plybrd-background-keys-pressed: #505050;
+  --plybrd-foreground-keys-toggled: #fbfbfb;
+  --plybrd-background-keys-toggled: #7c7c7c;
 
   color: var(--plybrd-foreground-color);
   background-color: var(--plybrd-background-color);
@@ -48,6 +53,11 @@ button:focus-visible {
     --plybrd-main-text-background: #ffffff;
     --plybrd-background-color: #ffffff;
     --plybrd-background-second: #f9f9f9;
+    --plybrd-background-keyboard: #cccccc;
+    --plybrd-background-keys: #ffffff;
+    --plybrd-background-keys-pressed: #efefef;
+    --plybrd-foreground-keys-toggled: #efefef;
+    --plybrd-background-keys-toggled: #303030;
   }
   a:hover {
     color: #747bff;

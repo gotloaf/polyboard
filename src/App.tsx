@@ -3,7 +3,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import './App.css'
 import defaultText from './default_text.txt?raw'
 import github from './assets/github.svg'
-import { eventToOutput, EN_US, KeyboardLayout, LAYOUTS, keyStateToOutput } from './keyboard/layout';
+import { EN_US, KeyboardLayout, LAYOUTS, keyStateToOutput } from './keyboard/layout';
 import KeyboardLayoutDisplay from './keyboard/preview';
 
 function App() {
@@ -56,7 +56,6 @@ function App() {
     setLastKey(keyname);
     // Bisect text
     const [beforeText, selectedText, afterText] = getTextParts();
-    console.log(keyname);
 
     if (keyname == 'ShiftLeft' || keyname == 'ShiftRight') {
       // If this wasn't caught by an event handler, it means this was caused by someone *clicking* shift on the virtual keyboard.
