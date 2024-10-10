@@ -1,0 +1,569 @@
+{
+  "bindings": {
+    "Digit1": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "\u2116",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "1",
+        "is_deadkey": false
+      }
+    },
+    "Digit2": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "-",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "2",
+        "is_deadkey": false
+      }
+    },
+    "Digit3": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "\"",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "3",
+        "is_deadkey": false
+      }
+    },
+    "Digit4": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "\u20ae",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "4",
+        "is_deadkey": false
+      }
+    },
+    "Digit5": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": ":",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "5",
+        "is_deadkey": false
+      }
+    },
+    "Digit6": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": ".",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "6",
+        "is_deadkey": false
+      }
+    },
+    "Digit7": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "_",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "7",
+        "is_deadkey": false
+      }
+    },
+    "Digit8": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": ",",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "8",
+        "is_deadkey": false
+      }
+    },
+    "Digit9": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "%",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "9",
+        "is_deadkey": false
+      }
+    },
+    "Digit0": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "?",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "0",
+        "is_deadkey": false
+      }
+    },
+    "Minus": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0435",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0415",
+        "is_deadkey": false
+      }
+    },
+    "Equal": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0449",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0429",
+        "is_deadkey": false
+      }
+    },
+    "KeyQ": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0444",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0424",
+        "is_deadkey": false
+      }
+    },
+    "KeyW": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0446",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0426",
+        "is_deadkey": false
+      }
+    },
+    "KeyE": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0443",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0423",
+        "is_deadkey": false
+      }
+    },
+    "KeyR": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0436",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0416",
+        "is_deadkey": false
+      }
+    },
+    "KeyT": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u044d",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u042d",
+        "is_deadkey": false
+      }
+    },
+    "KeyY": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u043d",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u041d",
+        "is_deadkey": false
+      }
+    },
+    "KeyU": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0433",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0413",
+        "is_deadkey": false
+      }
+    },
+    "KeyI": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0448",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0428",
+        "is_deadkey": false
+      }
+    },
+    "KeyO": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u04af",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u04ae",
+        "is_deadkey": false
+      }
+    },
+    "KeyP": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0437",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0417",
+        "is_deadkey": false
+      }
+    },
+    "BracketLeft": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u043a",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u041a",
+        "is_deadkey": false
+      }
+    },
+    "BracketRight": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u044a",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u042a",
+        "is_deadkey": false
+      }
+    },
+    "KeyA": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0439",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0419",
+        "is_deadkey": false
+      }
+    },
+    "KeyS": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u044b",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u042b",
+        "is_deadkey": false
+      }
+    },
+    "KeyD": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0431",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0411",
+        "is_deadkey": false
+      }
+    },
+    "KeyF": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u04e9",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u04e8",
+        "is_deadkey": false
+      }
+    },
+    "KeyG": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0430",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0410",
+        "is_deadkey": false
+      }
+    },
+    "KeyH": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0445",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0425",
+        "is_deadkey": false
+      }
+    },
+    "KeyJ": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0440",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0420",
+        "is_deadkey": false
+      }
+    },
+    "KeyK": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u043e",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u041e",
+        "is_deadkey": false
+      }
+    },
+    "KeyL": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u043b",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u041b",
+        "is_deadkey": false
+      }
+    },
+    "Semicolon": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0434",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0414",
+        "is_deadkey": false
+      }
+    },
+    "Quote": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u043f",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u041f",
+        "is_deadkey": false
+      }
+    },
+    "Backquote": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "=",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "+",
+        "is_deadkey": false
+      }
+    },
+    "Backslash": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "\\",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "|",
+        "is_deadkey": false
+      },
+      "output_ctrl": {
+        "value": "\u001c",
+        "is_deadkey": false
+      }
+    },
+    "KeyZ": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u044f",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u042f",
+        "is_deadkey": false
+      }
+    },
+    "KeyX": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0447",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0427",
+        "is_deadkey": false
+      }
+    },
+    "KeyC": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0451",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0401",
+        "is_deadkey": false
+      }
+    },
+    "KeyV": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0441",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0421",
+        "is_deadkey": false
+      }
+    },
+    "KeyB": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u043c",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u041c",
+        "is_deadkey": false
+      }
+    },
+    "KeyN": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0438",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0418",
+        "is_deadkey": false
+      }
+    },
+    "KeyM": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0442",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0422",
+        "is_deadkey": false
+      }
+    },
+    "Comma": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u044c",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u042c",
+        "is_deadkey": false
+      }
+    },
+    "Period": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u0432",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u0412",
+        "is_deadkey": false
+      }
+    },
+    "Slash": {
+      "caps_is_shift": true,
+      "output_default": {
+        "value": "\u044e",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "\u042e",
+        "is_deadkey": false
+      }
+    },
+    "Space": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": " ",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": " ",
+        "is_deadkey": false
+      },
+      "output_ctrl": {
+        "value": " ",
+        "is_deadkey": false
+      }
+    },
+    "IntlBackslash": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": "\\",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": "|",
+        "is_deadkey": false
+      },
+      "output_ctrl": {
+        "value": "\u001c",
+        "is_deadkey": false
+      }
+    },
+    "NumpadDecimal": {
+      "caps_is_shift": false,
+      "output_default": {
+        "value": ",",
+        "is_deadkey": false
+      },
+      "output_shift": {
+        "value": ",",
+        "is_deadkey": false
+      }
+    }
+  },
+  "deadkeys": {},
+  "locale_name": "mn-MN",
+  "language_name": "Mongolian Cyrillic"
+}

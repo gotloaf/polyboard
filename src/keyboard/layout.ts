@@ -1,23 +1,5 @@
 
-import de_de from './layouts/de_de.json'
-import el_gr from './layouts/el_gr.json'
-import en_gb from './layouts/en_gb.json'
-import en_us_dvorak from './layouts/en_us_dvorak.json'
 import en_us from './layouts/en_us.json'
-import es_es from './layouts/es_es.json'
-import fi_fi from './layouts/fi_fi.json'
-import fr_fr from './layouts/fr_fr.json'
-import he_il from './layouts/he_il.json'
-import it_it from './layouts/it_it.json'
-import nl_nl from './layouts/nl_nl.json'
-import pl_pl_programmers from './layouts/pl_pl_programmers.json'
-import pl_pl from './layouts/pl_pl.json'
-import ro_ro from './layouts/ro_ro.json'
-import ru_ru from './layouts/ru_ru.json'
-import ru_ru_phonetic from './layouts/ru_ru_phonetic.json'
-import sl_si from './layouts/sl_si.json'
-import sv_se from './layouts/sv_se.json'
-import sy_sy from './layouts/sy_sy.json'
 
 
 export type KeyOutput = {
@@ -47,30 +29,24 @@ export type KeyboardLayout = {
     },
     locale_name: string,
     language_name: string,
+    flag_code?: string,
 };
 
 export const EN_US: KeyboardLayout = en_us;
-export const LAYOUTS: KeyboardLayout[] = [
-    de_de,
-    el_gr,
-    en_gb,
-    en_us_dvorak,
-    en_us,
-    es_es,
-    fi_fi,
-    fr_fr,
-    he_il,
-    it_it,
-    nl_nl,
-    pl_pl_programmers,
-    pl_pl,
-    ro_ro,
-    ru_ru,
-    ru_ru_phonetic,
-    sl_si,
-    sv_se,
-    sy_sy,
-];
+const LAYOUT_MODULES = import.meta.glob('./layouts/*.json', { eager: true });
+export const LAYOUTS: KeyboardLayout[] = Object.keys(LAYOUT_MODULES).map((v) => {
+    return LAYOUT_MODULES[v] as KeyboardLayout;
+});
+
+export function layoutToEmoji(
+    layout: KeyboardLayout
+): string {
+    const parts = layout.locale_name.split('-');
+    const region = layout.flag_code ?? parts[parts.length - 1].toLowerCase();
+    const emojiCodes = region.split('').map((v) => (v.charCodeAt(0) + 0x1f1e6 - 0x61).toString(16)).join("-");
+
+    return `https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/${emojiCodes}.svg`;
+}
 
 export function keyStateToOutput(
     binding: KeyBinding,

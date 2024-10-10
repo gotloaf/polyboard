@@ -39,12 +39,22 @@
   grid-area: bottom-bar-top / left / bottom / keyboard-right;
   padding: .5em;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  gap: .75em;
 
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0);
   transition: background-color ease-in-out 100ms;
+}
+
+.selector > img {
+  width: 2em;
+}
+
+.selector-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .selector:hover {
@@ -79,6 +89,10 @@
 
 .layout-option {
   padding: .5em;
+  display: flex;
+  flex-direction: row;
+  gap: .25em;
+
   background-color: rgba(128, 128, 128, 0);
   transition: background-color ease-in-out 100ms;
   cursor: pointer;
@@ -86,6 +100,10 @@
 
 .layout-option:hover {
   background-color: rgba(128, 128, 128, 0.2);
+}
+
+.layout-option > img {
+  width: 1.5em;
 }
 
 .locale-name {
