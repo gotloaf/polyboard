@@ -26,6 +26,7 @@ export default function KeyboardLayoutDisplay(props: {
     capsLock: boolean,
     lastKey: string | null,
     deadKey: string | null,
+    onClick: (keyname: string) => boolean,
 }) {
 
 
@@ -54,7 +55,13 @@ export default function KeyboardLayoutDisplay(props: {
                     '';
 
                 // Get key display
-                return <div id={`keyboard-key-${value[0]}`} className={`keyboard-key ${props.lastKey == value[0] ? 'last-key' : ''} ${isDeadKey ? 'is-deadkey': ''} ${affectedByDeadKey ? 'affected-by-deadkey': ''} ${additionalStyle}`} key={`key-${rowIndex}-${columnIndex}`} style={style}>
+                return <div
+                    id={`keyboard-key-${value[0]}`}
+                    className={`keyboard-key ${props.lastKey == value[0] ? 'last-key' : ''} ${isDeadKey ? 'is-deadkey': ''} ${affectedByDeadKey ? 'affected-by-deadkey': ''} ${additionalStyle}`}
+                    key={`key-${rowIndex}-${columnIndex}`}
+                    style={style}
+                    onClick={() => {props.onClick(value[0])}}
+                >
                     {
                         value[2] !== undefined ?
                         value[2] :
