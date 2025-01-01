@@ -9,7 +9,7 @@ import KeyboardLayoutDisplay from './keyboard/preview';
 function App() {
   // Text content management
   const textArea = useRef<HTMLTextAreaElement>(null);
-  const [textContent, setTextContent] = useState(defaultText.replaceAll("\r", ""));
+  const [textContent, setTextContent] = useState("");
   const selectionArea = useRef<[number, number] | undefined>();
   const [deadKey, setDeadKey] = useState<string | null>(null);
 
@@ -180,6 +180,7 @@ function App() {
         className="main-text"
         ref={textArea}
         value={textContent}
+        placeholder={defaultText.replaceAll("\r", "")}
         onKeyDown={(event) => {
           setLastKey(event.code);
 
