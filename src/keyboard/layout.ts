@@ -30,6 +30,7 @@ export type KeyboardLayout = {
     locale_name: string,
     language_name: string,
     flag_code?: string,
+    custom_flag?: string
 };
 
 export const EN_US: KeyboardLayout = en_us;
@@ -47,6 +48,13 @@ export function layoutToEmoji(
 
     return `https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/${emojiCodes}.svg`;
 }
+
+export function layoutToFlag(
+    layout: KeyboardLayout
+): string {
+    return layout.custom_flag ? `/flags/${layout.custom_flag}` : layoutToEmoji(layout);
+}
+
 
 export function keyStateToOutput(
     binding: KeyBinding,

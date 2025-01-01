@@ -3,7 +3,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import './App.css'
 import defaultText from './default_text.txt?raw'
 import github from './assets/github.svg'
-import { EN_US, KeyboardLayout, LAYOUTS, keyStateToOutput, layoutToEmoji } from './keyboard/layout';
+import { EN_US, KeyboardLayout, LAYOUTS, keyStateToOutput, layoutToFlag } from './keyboard/layout';
 import KeyboardLayoutDisplay from './keyboard/preview';
 
 function App() {
@@ -235,7 +235,7 @@ function App() {
 
       </div>
       <div className="selector" onClick={() => {setPickerShown(true)}}>
-        <img src={layoutToEmoji(layout)}/>
+        <img src={layoutToFlag(layout)}/>
         <div className="selector-content">
           <span className="language-name">{layout.language_name}</span>
           <span className="language-subtitle">{layout.locale_name}</span>
@@ -259,7 +259,7 @@ function App() {
       <div className="picker">
         {LAYOUTS.map((value) => {
           return <div className="layout-option" key={value.language_name + value.locale_name} onClick={() => {setLayout(value); setPickerShown(false);}}>
-            <img src={layoutToEmoji(value)}/>
+            <img src={layoutToFlag(value)}/>
             {value.language_name} <span className="locale-name">({value.locale_name})</span>
           </div>;
         })}

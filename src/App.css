@@ -47,10 +47,6 @@
   transition: background-color ease-in-out 100ms;
 }
 
-.selector > img {
-  width: 2em;
-}
-
 .selector-content {
   display: flex;
   flex-direction: column;
